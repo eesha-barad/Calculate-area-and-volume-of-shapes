@@ -1,4 +1,4 @@
-# Shape Calculator
+# Area and Volume Calculator of different Shapes
 
 ## Overview
 This is a Java-based menu-driven program that calculates the area, perimeter, surface area, and volume of different geometric shapes. The program follows best coding practices, uses object-oriented programming principles, and is structured across multiple files for maintainability.
