@@ -1,3 +1,5 @@
+//Rectangle.java
+
 import java.util.Scanner;
 
 // Rectangle class extending Shape
