@@ -1,32 +1,30 @@
-//Sphere.java
-
 import java.util.Scanner;
 
-// Square class extending Shape
-class Square extends Shape {
-    public Square(double side) {
-        super(side, 0, 0, 4);
+// Sphere class extending Shape and implementing Volume
+class Sphere extends Shape implements Volume {
+    public Sphere(double radius) {
+        super(radius, 0, 0, 0);
     }
 
     public double calculateArea() {
-        return roundToTwoDecimal(dim_one * dim_one);
+        return roundToTwoDecimal(4 * Math.PI * dim_one * dim_one);
     }
 
     public double calculatePerimeter() {
-        return roundToTwoDecimal(4 * dim_one);
+        return roundToTwoDecimal(2 * Math.PI * dim_one);
     }
 
     public double calculateVolume() {
-        return 0;
+        return roundToTwoDecimal((4.0 / 3) * Math.PI * dim_one * dim_one * dim_one);
     }
 
     public double calculateSurfaceArea() {
-        return 0;
+        return calculateArea();
     }
 
-    public static Square getInput() {
+    public static Sphere getInput() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter side of Square: ");
-        return new Square(sc.nextDouble());
+        System.out.print("Enter radius of Sphere: ");
+        return new Sphere(sc.nextDouble());
     }
 }
