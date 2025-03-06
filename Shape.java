@@ -20,3 +20,20 @@ abstract class Shape {
         this.dim_three = dim_three;
         this.num_sides = num_sides;
     }
+
+    // Abstract Methods
+    abstract public double calculateArea();
+    abstract public double calculatePerimeter();
+    abstract public double calculateVolume();
+    abstract public double calculateSurfaceArea();
+
+    // Implemented Method
+    public int getNumSides() {
+        return num_sides;
+    }
+
+    // Utility method for rounding to two decimal places
+    protected double roundToTwoDecimal(double value) {
+        return Math.floor(value * 100) / 100;
+    }
+}
